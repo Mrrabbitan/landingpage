@@ -1,0 +1,90 @@
+.Fontpage {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.Fontpage .leftContent {
+  height: auto;
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-start;
+  position: relative;
+}
+.Fontpage .leftContent .topImage {
+  display: block;
+  justify-content: flex-start;
+  margin-top: 80px;
+  margin-left: 240px;
+}
+.Fontpage .leftContent .midText {
+  font-size: 80px;
+  font-weight: bold;
+  display: block;
+  color: black;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  margin-left: 240px;
+}
+.Fontpage .leftContent .midSmallText {
+  display: block;
+  height: auto;
+  width: 500px;
+  margin-left: 240px;
+  font-size: 22px;
+  text-align: left;
+  margin-bottom: 60px;
+}
+.Fontpage .leftContent .monaButton {
+  height: 80px;
+  width: 500px;
+  line-height: 80px;
+  border-radius: 60px;
+  font-size: 32px;
+  color: white;
+  background: #0068eb;
+  margin-left: 240px;
+  z-index: 10;
+}
+.Fontpage .leftContent .sevenleft {
+  position: absolute;
+  bottom: -80px;
+  left: 50px;
+  z-index: 1;
+}
+.Fontpage .rightContent {
+  height: auto;
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+}
+.Fontpage .rightContent .rightImgSquare {
+  position: absolute;
+  top: 82px;
+  left: 350px;
+  z-index: 1;
+}
+.Fontpage .rightContent .rightImgrunsq {
+  position: absolute;
+  z-index: 1;
+  top: 82px;
+  left: 370px;
+}
+.Fontpage .rightContent .rightImg {
+  display: block;
+  height: 500px;
+  width: 616px;
+  margin-top: 80px;
+  margin-left: 100px;
+  z-index: 10;
+}
+.roundlast {
+  display: block;
+  position: absolute;
+  right: 0px;
+  margin-top: 80px;
+}

@@ -1,0 +1,28 @@
+@import '../../../style/function.scss';
+
+.FAQ {
+  color: #1b1b1b;
+  font-size: dim(16);
+  padding: 0 12%;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+.leftImg{
+    height:1240px;
+    width:20px;
+    display: block;
+    margin-top: dim(126);
+}
+.rightText{
+    margin-top:dim(86);
+    margin-left:80px;
+}
+  p {
+    text-indent: dim(35);
+    margin-bottom: dim(10);
+  }
+  h3 {
+    color: #1f1f1f;
+    margin: dim(35) 0;
+  }
+}

@@ -1,0 +1,13 @@
+
+@import '../../style/function.scss';
+
+.app{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 160px 0px 160px;
+}
+
+.logo{
+    width:dim(80);
+}

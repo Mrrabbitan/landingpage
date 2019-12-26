@@ -1,0 +1,30 @@
+@import '../../style/function.scss';
+
+.list{ 
+
+    width:100%;
+    margin-left:-30px;
+        :global(.ant-menu-item){
+            width:130px;
+        }
+        :global(.ant-tabs-bar){
+            border-bottom:none;
+            
+        }
+        :global(.ant-tabs-nav){
+            font-size: 20px;
+            
+        }
+        .Tabpane{
+            width: 360px;
+            
+        }
+        :global(.ant-tabs-nav-wrap){
+            width:360px;
+            margin-left: 30px;
+        }
+
+        :global(.ant-tabs-nav-container){
+            width:380px;
+        }
+}

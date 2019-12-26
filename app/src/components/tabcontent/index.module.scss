@@ -1,0 +1,32 @@
+
+@import "../../style/function.scss";
+.tabContent{
+   .imgSize{
+       height:44px;
+       width:44px;
+    }
+   .topContent{
+       display: flex; 
+       flex-wrap: nowrap;
+       justify-content: space-between;
+       width:400px;
+   }
+    .spanText{
+        font-size:18px;
+    }
+   
+    .leftElement{
+        margin-left: -20px;
+    }
+    .bottomContent{
+        width:330px;
+        text-align: left;
+        margin-left: 60px;
+        margin-top: dim(20);
+    }
+  
+}
+
+:global(.ant-tabs){
+        overflow: visible ;
+    }

@@ -1,0 +1,64 @@
+.Fontpage {
+  height: auto;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.Fontpage .leftContent {
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-start;
+  position: relative;
+}
+.Fontpage .leftContent .topImage {
+  display: block;
+  justify-content: flex-start;
+}
+.Fontpage .leftContent .midText {
+  font-size: 8vh;
+  font-weight: bold;
+  display: block;
+  color: black;
+}
+.Fontpage .leftContent .monaButton {
+  font-size: 5vh;
+  border-radius: 60px;
+  color: white;
+  background: #0068eb;
+  z-index: 10;
+}
+.Fontpage .leftContent .sevenleft {
+  position: absolute;
+  z-index: 1;
+}
+.Fontpage .rightContent {
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+}
+.Fontpage .rightContent .rightImgSquare {
+  position: absolute;
+  top: 82px;
+  left: 350px;
+  z-index: 1;
+}
+.Fontpage .rightContent .rightImgrunsq {
+  position: absolute;
+  z-index: 1;
+  top: 82px;
+  left: 370px;
+}
+.Fontpage .rightContent .rightImg {
+  display: block;
+  margin-top: 10vh;
+  z-index: 10;
+}
+.roundlast {
+  display: block;
+  position: absolute;
+  right: 0px;
+  margin-top: 10vh;
+}
