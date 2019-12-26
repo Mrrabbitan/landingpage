@@ -1,0 +1,7 @@
+.tabContent {
+  display: flex;
+  flex-wrap: wrap;
+}
+.tabContent .spanText {
+  font-size: 16px;
+}

@@ -1,0 +1,243 @@
+@import "../../../style/function.scss";
+
+
+.roundTop{
+   margin-bottom: -60px; 
+}
+.Fontpage{
+    margin: 2% 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    .imageBox{
+        height:2px;
+    }
+.leftContent{
+    display: flex;
+    flex-wrap: wrap;
+    width:50%;
+    flex-direction: column;
+    padding: 0 0;
+
+    .topImage{
+        display: block;
+        width:dim(150);
+        margin-top:50px;
+        margin-left: 180px;
+    }
+    .midText{
+        width:dim(450);
+        height:auto;
+        font-size:68px;
+        font-weight:bold;
+        display: block;
+        color:black;
+        margin-top:56px;
+        margin-bottom:66px;
+        margin-left: 170px;
+        z-index:10;
+    }
+    .monaButton{
+        width:dim(430);
+        height:dim(70);
+        line-height: dim(70);
+        font-size:dim(30);
+        border-radius: 60px;
+        color:white;
+        background:#0068eb;
+        margin-left: 180px;
+        z-index:10;
+    }
+
+    .sevenleft{
+        width:dim(340);
+        position: absolute;
+        left:dim(50);
+        z-index:1;
+    }
+}
+
+@media only screen and (min-width: 1826px) {
+.leftContent{
+    margin-right:-25%
+}
+.rightContent{
+    margin-right:-25%
+}
+}
+
+@media only screen and (min-width: 1926px) {
+.leftContent{
+    margin-right:-15%
+}
+.rightContent{
+    margin-right:-15%
+}
+}
+
+@media only screen and (min-width: 2026px) {
+.leftContent{
+    margin-right:-13%
+}
+.rightContent{
+    margin-right:-13%
+}
+}
+
+// 1826是dell显示屏浏览器大小
+
+// @media only screen and (max-width: 1826px) {
+// .rightContent{
+//     margin-right:10%
+// }
+// .leftContent{
+//     margin-right:10%
+// }
+// }
+
+
+
+
+
+
+@media only screen and (max-width: 1926px) {
+
+.leftContent{
+    margin-right:-5%
+}
+.rightContent{
+    margin-right:-5%
+}
+}
+
+@media only screen and (max-width: 1520px) {
+.rightContent{
+    margin-right:5%
+}
+.leftContent{
+    margin-right:-5%
+}
+}
+
+
+@media only screen and (max-width: 1420px) {
+
+.leftContent{
+    margin-right:5%
+}
+}
+
+@media only screen and (max-width: 1326px) {
+.rightContent {
+display: none !important;
+}
+.leftContent{
+    margin-right:10%
+}
+}
+
+
+@media only screen and (max-width: 1226px) {
+
+.leftContent{
+    margin-right:15%
+}
+}
+
+@media only screen and (max-width: 1126px) {
+
+.leftContent{
+    margin-right:25%
+}
+}
+
+@media only screen and (max-width: 1026px) {
+
+.leftContent{
+    margin-right:35%
+}
+}
+
+@media only screen and (max-width: 926px) {
+
+.leftContent{
+    margin-right:45%
+}
+}
+
+
+@media only screen and (max-width: 826px) {
+
+.leftContent{
+    margin-right:55%
+}
+}
+
+
+@media  screen and (max-width: 720px) {
+
+.leftContent{
+    margin-right:65%
+}
+}
+
+@media  screen and (max-width: 620px) {
+
+.leftContent{
+    margin-right:85%
+}
+}
+
+@media  screen and (max-width: 520px) {
+
+.leftContent{
+    margin-right:102%
+}
+}
+
+
+
+
+
+
+.rightContent{
+    margin-top:dim(43);
+    height: dim(600)*0.8;
+    width:50%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+
+.rightImgSquare{
+    position: absolute;
+    width:100%;
+    margin-top:dim(100);
+    z-index:1;
+}
+.rightImgrunsq{
+    position: absolute;
+    z-index:1;
+    margin-top:dim(100);
+    width:96%;
+    margin-left:3vh
+}
+    .rightImg{
+        display: block;
+        margin-top:10vh;
+    }
+
+    .roundlast{
+        display:block;
+        width:100%;
+        height:2px;
+        right:0px;
+        margin-top:10vh;
+        z-index: 10;
+    }
+}
+
+
+}
+

@@ -1,0 +1,7 @@
+.list {
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  border-bottom: none;
+  text-align: center;
+}
