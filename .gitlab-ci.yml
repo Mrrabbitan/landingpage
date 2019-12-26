@@ -50,7 +50,7 @@ build:
   - faq
   script:
   - yarn build
-  - mv project/app/build dist
+  - mv build dist
   artifacts:
     paths:
     - dist
