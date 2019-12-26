@@ -26,3 +26,40 @@
     margin: dim(35) 0;
   }
 }
+
+
+@media only screen and (min-width: 1626px) {
+.leftBox{
+    margin-left:10%
+}
+.rightText{
+    margin-right:-5%
+}
+}
+
+@media only screen and (min-width: 1826px) {
+.leftBox{
+    margin-left:15%
+}
+.rightText{
+    margin-right:10%
+}
+}
+
+@media only screen and (min-width: 1926px) {
+.leftBox{
+    margin-left:15%
+}
+.rightText{
+    margin-right:10%
+}
+}
+
+@media only screen and (min-width: 2026px) {
+.leftBox{
+    margin-left:15%
+}
+.rightText{
+    margin-right:10%
+}
+}
