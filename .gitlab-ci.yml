@@ -1,7 +1,7 @@
 stages:
-- test
-- build
-- deploy
+  - test
+  - build
+  - deploy
 
 .basic: &basic
   tags:
@@ -11,8 +11,8 @@ stages:
   <<: *basic
   image: node:alpine
   before_script:
-  - apk add --no-cache python make g++
-  - npx tyarn install --frozen-lockfile
+    - apk add --no-cache python make g++
+    - npx tyarn install --frozen-lockfile
 
 code_quality:
   stage: test
@@ -29,31 +29,36 @@ code_quality:
     - docker login -u dockerman -p PyyozT9y89 artifactory.momenta.works
     - docker pull artifactory.momenta.works/docker-momenta/gitlab/codequality:$SP_VERSION
     - docker run
-        --env SOURCE_CODE="$PWD"
-        --volume "$PWD":/code
-        --volume /var/run/docker.sock:/var/run/docker.sock
-        "artifactory.momenta.works/docker-momenta/gitlab/codequality:$SP_VERSION" /code
+      --env SOURCE_CODE="$PWD"
+      --volume "$PWD":/code
+      --volume /var/run/docker.sock:/var/run/docker.sock
+      "artifactory.momenta.works/docker-momenta/gitlab/codequality:$SP_VERSION" /code
   artifacts:
     reports:
       codequality: gl-code-quality-report.json
     expire_in: 1 week
   only:
-  - /^feature/.*$/
+    - /^feature/.*$/
 
+test:
+  <<: *yarn_optimize
+  stage: test
+  script:
+    - yarn workspace @momenta.ai/mona-homepage test-coverage
 
 build:
   <<: *yarn_optimize
   stage: build
   only:
-  - master
-  - develop
-  - faq
+    - master
+    - develop
+    - faq
   script:
-  - yarn build
-  - mv project/app/build dist
+    - yarn build
+    - mv packages/mona-homepage/build/ dist
   artifacts:
     paths:
-    - dist
+      - dist
     expire_in: 1 day
 
 deploy:
@@ -61,27 +66,27 @@ deploy:
   stage: deploy
   image: garland/aws-cli-docker
   only:
-  - master
+    - master
   dependencies:
-  - build
+    - build
   environment:
     name: review/$CI_COMMIT_REF_NAME
   variables:
     AWS_DEFAULT_REGION: cn-northwest-1
   script:
-  - aws s3 cp --recursive dist s3://mona.momenta.cn/ --acl public-read
+    - aws s3 cp --recursive dist s3://mona.momenta.cn/ --acl public-read
 
 pages:
   <<: *basic
   stage: deploy
   image: busybox
   only:
-  - develop
-  - faq
+    - develop
+    - faq
   dependencies:
-  - build
+    - build
   script:
-  - mv dist public
+    - mv dist public
   artifacts:
     paths:
-    - public
+      - public

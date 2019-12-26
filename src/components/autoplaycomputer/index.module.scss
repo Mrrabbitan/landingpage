@@ -37,5 +37,11 @@
     
   }
 
+  :global(.ant-carousel .slick-dots li.slick-active button){
+    height: 16px ;
+    width: 16px;
+    background:#0068fe;
+  }
+
  
 }

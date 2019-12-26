@@ -40,11 +40,6 @@ code_quality:
   only:
   - /^feature/.*$/
 
-test:
-  <<: *yarn_optimize
-  stage: test
-  script:
-  - yarn workspace @momenta.ai/mona-homepage test-coverage
 
 build:
   <<: *yarn_optimize
@@ -55,7 +50,7 @@ build:
   - faq
   script:
   - yarn build
-  - mv packages/mona-homepage/build/ dist
+  - mv project/app/build dist
   artifacts:
     paths:
     - dist
