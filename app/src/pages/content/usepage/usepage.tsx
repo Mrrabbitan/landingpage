@@ -1,46 +1,24 @@
 import React, { useState, useEffect } from "react";
 import style from "./index.module.scss";
 import DocumentTitle from "react-document-title";
+import { CheckboxChangeEvent } from "antd/lib/checkbox";
 import termsDom from "./terms-dom";
 import { Col, Row, Checkbox, Button } from "antd";
 import { Link } from "react-router-dom";
 
 export const Usepage: React.FC = () => {
-  const [stage, setStage] = useState<any>(false);
-  
-  
-  
-  const tempstatus = document.cookie.split(';')
+  const [checked, setChecked] = useState<any>(false);
 
-  const deep=()=>{
-  for( let i of tempstatus){
-    if(i.indexOf('Userstatus')>0){
-      const tempCookie = (i.split('='))[1]
-      return tempCookie
-    }
-}
+  useEffect(() => {
+    let checkedInCookie = "1" === localStorage.getItem("checked");
+    setChecked(checkedInCookie);
+  }, []);
 
-}
-var temp = deep() === 'false'?false:true
-
- 
-useEffect(() => {}, [stage, temp]);
-  const stateChange = () => {
-    console.log(temp)
-    if (stage == false) {
-      setStage(true);
-     
-      document.cookie='Userstatus='+stage;
-    } else {
-      setStage(false);
-     
-      document.cookie='Userstatus='+stage
-    }
+  const onCheckboxChanged = (e: CheckboxChangeEvent) => {
+    setChecked(e.target.checked);
+    localStorage.setItem("checked", e.target.checked ? "1" : "0");
   };
 
-
-
-  
   return (
     <DocumentTitle title="用户协议 | Momenta">
       <Row>
@@ -63,7 +41,11 @@ useEffect(() => {}, [stage, temp]);
             }}
           ></div>
           <Col className={style.checkboxItem} span={24}>
-            <Checkbox style={{ fontSize: "14px" }} onChange={stateChange} checked={!temp}>
+            <Checkbox
+              style={{ fontSize: "14px" }}
+              onChange={onCheckboxChanged}
+              checked={checked}
+            >
               同意软件使用协议
             </Checkbox>
           </Col>
@@ -71,11 +53,11 @@ useEffect(() => {}, [stage, temp]);
             <Button
               href="#/download"
               icon="download"
-              disabled={temp}
+              disabled={!checked}
               type="primary"
               size="large"
               style={{
-                borderRadius: "20px",
+                borderRadius: "20px"
                 // background: color,
                 // color: "#fff"
               }}
