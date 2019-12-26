@@ -1,0 +1,87 @@
+stages:
+- test
+- build
+- deploy
+
+.basic: &basic
+  tags:
+    - aws
+
+.yarn_optimize: &yarn_optimize
+  <<: *basic
+  image: node:alpine
+  before_script:
+  - apk add --no-cache python make g++
+  - npx tyarn install --frozen-lockfile
+
+code_quality:
+  stage: test
+  tags:
+    - docker
+  image: docker:stable
+  variables:
+    DOCKER_DRIVER: overlay2
+    SP_VERSION: 11-9-stable
+  allow_failure: true
+  services:
+    - docker:stable-dind
+  script:
+    - docker login -u dockerman -p PyyozT9y89 artifactory.momenta.works
+    - docker pull artifactory.momenta.works/docker-momenta/gitlab/codequality:$SP_VERSION
+    - docker run
+        --env SOURCE_CODE="$PWD"
+        --volume "$PWD":/code
+        --volume /var/run/docker.sock:/var/run/docker.sock
+        "artifactory.momenta.works/docker-momenta/gitlab/codequality:$SP_VERSION" /code
+  artifacts:
+    reports:
+      codequality: gl-code-quality-report.json
+    expire_in: 1 week
+  only:
+  - /^feature/.*$/
+
+
+build:
+  <<: *yarn_optimize
+  stage: build
+  only:
+  - master
+  - develop
+  - faq
+  script:
+  - yarn build
+  - mv project/app/build dist
+  artifacts:
+    paths:
+    - dist
+    expire_in: 1 day
+
+deploy:
+  <<: *basic
+  stage: deploy
+  image: garland/aws-cli-docker
+  only:
+  - master
+  dependencies:
+  - build
+  environment:
+    name: review/$CI_COMMIT_REF_NAME
+  variables:
+    AWS_DEFAULT_REGION: cn-northwest-1
+  script:
+  - aws s3 cp --recursive dist s3://mona.momenta.cn/ --acl public-read
+
+pages:
+  <<: *basic
+  stage: deploy
+  image: busybox
+  only:
+  - develop
+  - faq
+  dependencies:
+  - build
+  script:
+  - mv dist public
+  artifacts:
+    paths:
+    - public
