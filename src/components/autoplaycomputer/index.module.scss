@@ -1,47 +1,43 @@
-@import '../../style/function.scss';
+@import "../../style/function.scss";
 
 .autoplay {
   position: relative;
-  width: dim(1000)*0.59;
-  height: dim(600)*0.8;
+  width: dim(1000) * 0.59;
+  height: dim(600) * 0.8;
   z-index: 10;
   margin-left: 4vh;
   img {
-    width: dim(731)*0.79;
-    height: dim(440)*0.78;
+    width: dim(731) * 0.79;
+    height: dim(440) * 0.78;
     border-radius: 16px 16px 0 0;
-    margin-left:dim(6);
-    margin-top:dim(6);
+    margin-left: dim(6);
+    margin-top: dim(6);
   }
-  @media(max-width: 600px) {
-    width: dim(800)*0.5;
-    height: dim(673)*0.5;
-    padding: dim(22)*0.5 dim(16)*0.5;
+  @media (max-width: 600px) {
+    width: dim(800) * 0.5;
+    height: dim(673) * 0.5;
+    padding: dim(22) * 0.5 dim(16) * 0.5;
     margin: 0 auto;
     img {
-    width: dim(767)*0.5;
-    height: dim(440)*0.5;
+      width: dim(767) * 0.5;
+      height: dim(440) * 0.5;
     }
   }
-  :global(.slick-dots-bottom){
-    bottom:dim(-170);
-    height:dim(24);
-
+  :global(.slick-dots-bottom) {
+    bottom: dim(-170);
+    height: dim(24);
   }
 
-  :global(.slick-dots-bottom>li>button){
+  :global(.slick-dots-bottom > li > button) {
     border-radius: 16px;
-    height:16px;
+    height: 16px;
     background: #aaa;
-    margin:0 3px;
-    
+    margin: 0 3px;
   }
 
-  :global(.ant-carousel .slick-dots li.slick-active button){
-    height: 16px ;
+  :global(.ant-carousel .slick-dots li.slick-active button) {
+    height: 16px;
     width: 16px;
-    background:#0068fe;
+    background: #0068fe;
   }
-
- 
 }

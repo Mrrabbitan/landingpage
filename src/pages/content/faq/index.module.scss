@@ -1,4 +1,4 @@
-@import '../../../style/function.scss';
+@import "../../../style/function.scss";
 
 .FAQ {
   color: #1b1b1b;
@@ -7,16 +7,16 @@
   display: flex;
   justify-content: space-between;
   text-align: left;
-.leftImg{
-    height:1240px;
-    width:20px;
+  .leftImg {
+    height: 1240px;
+    width: 20px;
     display: block;
     margin-top: dim(126);
-}
-.rightText{
-    margin-top:dim(86);
-    margin-left:80px;
-}
+  }
+  .rightText {
+    margin-top: dim(86);
+    margin-left: 80px;
+  }
   p {
     text-indent: dim(35);
     margin-bottom: dim(10);
@@ -27,39 +27,38 @@
   }
 }
 
-
 @media only screen and (min-width: 1626px) {
-.leftBox{
-    margin-left:10%
-}
-.rightText{
-    margin-right:-5%
-}
+  .leftBox {
+    margin-left: 10%;
+  }
+  .rightText {
+    margin-right: -5%;
+  }
 }
 
 @media only screen and (min-width: 1826px) {
-.leftBox{
-    margin-left:15%
-}
-.rightText{
-    margin-right:10%
-}
+  .leftBox {
+    margin-left: 15%;
+  }
+  .rightText {
+    margin-right: 10%;
+  }
 }
 
 @media only screen and (min-width: 1926px) {
-.leftBox{
-    margin-left:15%
-}
-.rightText{
-    margin-right:10%
-}
+  .leftBox {
+    margin-left: 15%;
+  }
+  .rightText {
+    margin-right: 10%;
+  }
 }
 
 @media only screen and (min-width: 2026px) {
-.leftBox{
-    margin-left:15%
-}
-.rightText{
-    margin-right:10%
-}
+  .leftBox {
+    margin-left: 15%;
+  }
+  .rightText {
+    margin-right: 10%;
+  }
 }

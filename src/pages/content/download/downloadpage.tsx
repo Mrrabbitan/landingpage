@@ -13,7 +13,11 @@ export const Download: React.FC = () => {
     <DocumentTitle title="下载 | Momenta">
       <Row>
         <Col span={24}>
-           <img  className={style.roundTop} alt="rounttop" src="/picInner/round.png"/>
+          <img
+            className={style.roundTop}
+            alt="rounttop"
+            src="/picInner/round.png"
+          />
         </Col>
         <Col span={24} className={style.Frontpage}>
           <Col span={12} className={style.leftContent}>

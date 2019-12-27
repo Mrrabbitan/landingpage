@@ -8,7 +8,7 @@ import { FQA } from "../../pages";
 import { Usepage } from "../../pages";
 import { Footer } from "../../pages";
 import DocumentTitle from "react-document-title";
-import { Row,Col } from "antd";
+import { Row, Col } from "antd";
 
 const App: React.FC = () => {
   const items = [
@@ -35,14 +35,14 @@ const App: React.FC = () => {
       <div className="App">
         <HashRouter>
           <Header items={items} />
-            <Row>
-              <Col span={24} className="contentBox"> 
-                <Route path="/" exact component={Frontpage}></Route>
-                <Route path="/download" component={Download}></Route>
-                <Route path="/terms" component={Usepage}></Route>
-                <Route path="/faq" component={FQA}></Route>
-              </Col>
-            </Row>
+          <Row>
+            <Col span={24} className="contentBox">
+              <Route path="/" exact component={Frontpage}></Route>
+              <Route path="/download" component={Download}></Route>
+              <Route path="/terms" component={Usepage}></Route>
+              <Route path="/faq" component={FQA}></Route>
+            </Col>
+          </Row>
           <Footer />
         </HashRouter>
       </div>

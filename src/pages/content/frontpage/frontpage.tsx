@@ -9,26 +9,25 @@ import { Link } from "react-router-dom";
 
 export const Frontpage: React.FC = () => {
   const images = [image1, image2, image3];
-  document.cookie='init=0'
-  document.cookie='inittype=1'
+  document.cookie = "init=0";
+  document.cookie = "inittype=1";
   return (
     <Row>
       <Col>
         <img
-            className={style.roundTop}
-            alt="roundTop"
-            src="/picInner/round.png"
-          />
+          className={style.roundTop}
+          alt="roundTop"
+          src="/picInner/round.png"
+        />
       </Col>
       <Col span={24} className={style.Fontpage}>
         <Col span={12} xs={24} sm={24} className={style.leftContent}>
-          
-            <img
-              className={style.topImage}
-              alt="some_small_pic"
-              src="/picInner/geo_shape.png"
-            />
-           
+          <img
+            className={style.topImage}
+            alt="some_small_pic"
+            src="/picInner/geo_shape.png"
+          />
+
           <span className={style.midText}>
             桌面标注工具
             <br></br>
@@ -56,7 +55,7 @@ export const Frontpage: React.FC = () => {
             src="/picInner/square.png"
           ></img>
           <div className="rightAutoplay">
-            <AutoplayComputer images={images} ></AutoplayComputer>
+            <AutoplayComputer images={images}></AutoplayComputer>
           </div>
           <img
             className={style.roundlast}

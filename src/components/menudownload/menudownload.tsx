@@ -11,22 +11,20 @@ export const Menudownload: React.FC = () => {
     { key: "Linux", tab: "Linux", type: "tar.gz" }
   ];
   return (
-    
-      <div  className={style.list}>
-        <Tabs
-          defaultActiveKey="Windows"
-          onChange={() => {}}
-          style={{ border: "none" }}
-        >
-          {tabinfo.map(i => {
-            return (
-              <TabPane key={i.key} tab={i.tab} className={style.Tabpane}>
-                <Tabcontent images={i.key} type={i.type}></Tabcontent>
-              </TabPane>
-            );
-          })}
-        </Tabs>
-      </div>
-    
+    <div className={style.list}>
+      <Tabs
+        defaultActiveKey="Windows"
+        onChange={() => {}}
+        style={{ border: "none" }}
+      >
+        {tabinfo.map(i => {
+          return (
+            <TabPane key={i.key} tab={i.tab} className={style.Tabpane}>
+              <Tabcontent images={i.key} type={i.type}></Tabcontent>
+            </TabPane>
+          );
+        })}
+      </Tabs>
+    </div>
   );
 };

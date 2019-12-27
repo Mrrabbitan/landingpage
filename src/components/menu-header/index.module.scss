@@ -1,13 +1,10 @@
-@import '../../style/function.scss';
-.list{
-    
-    font-size:20px;
-    display:flex;
-    border-bottom: none;
-    text-align: center;
-    :global(.ant-menu-item){
-        width:130px;
-
-    }
-
+@import "../../style/function.scss";
+.list {
+  font-size: 20px;
+  display: flex;
+  border-bottom: none;
+  text-align: center;
+  :global(.ant-menu-item) {
+    width: 130px;
+  }
 }

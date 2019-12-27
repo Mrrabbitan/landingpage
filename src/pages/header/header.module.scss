@@ -1,74 +1,42 @@
+@import "../../style/function.scss";
 
-@import '../../style/function.scss';
-
-.app{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 30px 160px 0px 160px;
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 160px 0px 160px;
 }
 
-.logo{
-    width:dim(80);
+.logo {
+  width: dim(80);
 }
 
-@media screen and(min-width: 320px)and(max-width: 359px){ 
+@media screen and(min-width: 320px) and(max-width: 359px) {
+  .leftContent {
+    margin: 0 !important;
+  }
+}
 
-    
-        .leftContent{
-            margin:0 !important;
-           
-        }
-       
+@media screen and(min-width: 360px) and(max-width: 374px) {
+  .leftContent {
+    margin: 0 !important;
+  }
+}
 
-    
+@media screen and(min-width: 375px) and(max-width: 385px) {
+  .leftContent {
+    margin: 0 !important;
+  }
+}
 
-} 
+@media screen and(min-width: 386px) and(max-width: 392px) {
+  .leftContent {
+    margin: 0 !important;
+  }
+}
 
-@media screen and(min-width: 360px)and(max-width: 374px){ 
- 
-        .leftContent{
-            margin:0 !important;
-            
-        }
-        
-
-    
-
-} 
-
-@media screen and(min-width: 375px)and(max-width: 385px){ 
-
- 
-        .leftContent{
-            margin:0 !important;
-            
-        }
-        
-
-   
-
-} 
-
-@media screen and(min-width: 386px)and(max-width: 392px) { 
-
- 
-        .leftContent{
-            margin:0 !important;
-            
-        }
-       
-
-    
-
-} 
-
-@media screen and(min-width: 393px)and(max-width: 400px){ 
- 
-        .menu{
-            margin-left: 30px;
-        }
-      
-
-    
-} 
+@media screen and(min-width: 393px) and(max-width: 400px) {
+  .menu {
+    margin-left: 30px;
+  }
+}

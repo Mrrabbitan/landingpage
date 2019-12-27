@@ -1,4 +1,3 @@
 @function dim($x, $base: 16) {
-    @return ($x/$base) * 1rem;
-  }
-  
+  @return ($x/$base) * 1rem;
+}

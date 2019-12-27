@@ -1,11 +1,10 @@
-@import '../../../style/function.scss';
+@import "../../../style/function.scss";
 
 .userTerms {
   color: #1b1b1b;
   font-size: dim(17);
   padding: 0 15%;
   text-align: left;
-
 
   p {
     padding: 0 dim(50);
@@ -14,15 +13,14 @@
   blockquote {
     padding: 0 dim(00);
   }
-  .checkboxItem{
-      display: flex;
-      justify-content: center;
-      padding:dim(30) 0;
-      font-size: dim(18);
-  }
-  .buttonItem{
+  .checkboxItem {
     display: flex;
     justify-content: center;
-   
+    padding: dim(30) 0;
+    font-size: dim(18);
+  }
+  .buttonItem {
+    display: flex;
+    justify-content: center;
   }
 }
