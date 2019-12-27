@@ -14,7 +14,7 @@ export interface MenuItemProps{
 export const Header: React.FC<{items:MenuItemProps[]}> =({items})=>{
     return(
         <Row>
-            <Col className={style.app}>
+            <Col className={style.app} xs={24} sm={24}>
                 <Col span={2}  >
                     <Link to="/">
                         <img className={style.logo} src='/picInner/mona-logo-v1.png'/>

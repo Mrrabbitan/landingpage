@@ -29,7 +29,7 @@ export const Tabcontent: React.FC<{
         <Col span={24} offset={0} className={style.leftElement}>
           <img alt="roundtop" className={style.imgSize} src={src} />
           <span className={style.spanText}>
-            &nbsp;&nbsp;{images["images"]} (V1.3.25.1.{images["type"]})
+            &nbsp;&nbsp;{images["images"]} (V2.0.0.{images["type"]})
           </span>
         </Col>
         <div className={style.topButton}>
@@ -52,7 +52,7 @@ export const Tabcontent: React.FC<{
           checked={checked}
         >
           同意软件
-          <Link to="/license">使用协议</Link>
+          <Link to="/terms">使用协议</Link>
         </Checkbox>
       </div>
     </div>

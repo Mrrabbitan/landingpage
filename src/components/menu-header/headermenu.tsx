@@ -21,8 +21,8 @@ export const HEADERMENU:React.FC<{items:MenuItemProps[]}>=({items})=>{
                                     下载
                                 </NavLink>
                             </Menu.Item>
-                            <Menu.Item key="/license" >
-                                <NavLink to='/license'>
+                            <Menu.Item key="/terms" >
+                                <NavLink to='/terms'>
                                     使用协议
                                 </NavLink>
                             </Menu.Item>

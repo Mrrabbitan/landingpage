@@ -21,7 +21,7 @@ const App: React.FC = () => {
       text: "下载"
     },
     {
-      path: "/license",
+      path: "/terms",
       text: "使用协议"
     },
     {
@@ -39,7 +39,7 @@ const App: React.FC = () => {
               <Col span={24} className="contentBox"> 
                 <Route path="/" exact component={Frontpage}></Route>
                 <Route path="/download" component={Download}></Route>
-                <Route path="/license" component={Usepage}></Route>
+                <Route path="/terms" component={Usepage}></Route>
                 <Route path="/faq" component={FQA}></Route>
               </Col>
             </Row>

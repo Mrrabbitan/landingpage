@@ -21,7 +21,7 @@ export const Frontpage: React.FC = () => {
           />
       </Col>
       <Col span={24} className={style.Fontpage}>
-        <Col span={12} className={style.leftContent}>
+        <Col span={12} xs={24} sm={24} className={style.leftContent}>
           
             <img
               className={style.topImage}
