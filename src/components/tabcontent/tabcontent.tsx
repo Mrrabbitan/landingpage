@@ -7,6 +7,7 @@ import style from "./index.module.scss";
 export const Tabcontent: React.FC<{
   images: Object;
   type: Object;
+  version: Object;
 }> = images => {
   const [checked, setChecked] = useState<any>(false);
 
@@ -29,7 +30,8 @@ export const Tabcontent: React.FC<{
         <Col span={24} offset={0} className={style.leftElement}>
           <img alt="roundtop" className={style.imgSize} src={src} />
           <span className={style.spanText}>
-            &nbsp;&nbsp;{images["images"]} (V2.0.0.{images["type"]})
+            &nbsp;&nbsp;{images["images"]} ({images["version"]}.{images["type"]}
+            )
           </span>
         </Col>
         <div className={style.topButton}>
