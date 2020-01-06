@@ -22,7 +22,7 @@ export const Tabcontent: React.FC<{
   };
 
   const src = "/picInner/" + images["images"] + ".png";
-  const downloadSrc = `https://s3.cn-north-1.amazonaws.com.cn/momenta-download/mona-latest3.${images["type"]}`;
+  const downloadSrc = `https://s3.cn-north-1.amazonaws.com.cn/momenta-download/mona-v2.0.0.${images["type"]}`;
 
   return (
     <div className={style.tabContent}>
