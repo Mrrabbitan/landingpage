@@ -28,10 +28,12 @@ export const Tabcontent: React.FC<{
     <div className={style.tabContent}>
       <div className={style.topContent}>
         <Col span={24} offset={0} className={style.leftElement}>
-          <img alt="roundtop" className={style.imgSize} src={src} />
+          <div className={style.imgSize}>
+            <img alt="roundtop" src={src} />
+          </div>
           <span className={style.spanText}>
-            &nbsp;&nbsp;{images["images"]} ({images["version"]}.{images["type"]}
-            )
+            &nbsp;&nbsp;&nbsp;&nbsp;{images["images"]} ({images["version"]}.
+            {images["type"]})
           </span>
         </Col>
         <div className={style.topButton}>
