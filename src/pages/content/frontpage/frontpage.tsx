@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./index.module.scss";
-import { Row, Col } from "antd";
+import { Row, Col, Button } from "antd";
 import image1 from "../../../../public/picInner/picture_1.png";
 import image2 from "../../../../public/picInner/autoplay2.png";
 import image3 from "../../../../public/picInner/autoplay3.png";
@@ -13,29 +13,34 @@ export const Frontpage: React.FC = () => {
   document.cookie = "inittype=1";
   return (
     <Row>
-      <Col>
-        <img
-          className={style.roundTop}
-          alt="roundTop"
-          src="/picInner/round.png"
-        />
-      </Col>
-      <Col span={24} className={style.Fontpage}>
-        <Col span={12} xs={24} sm={24} className={style.leftContent}>
+      <Col xs={24} sm={12} md={12} lg={24} className={style.Fontpage}>
+        <Col xs={24} sm={12} md={12} lg={24} className={style.leftContent}>
           <img
             className={style.topImage}
             alt="some_small_pic"
             src="/picInner/geo_shape.png"
           />
+          <Row>
+            <Col className={style.midText} xs={24} sm={24} md={24} lg={24}>
+              桌面标注工具
+              <br></br>
+              让标注更美好
+            </Col>
+          </Row>
+          <Row>
+            <Col className={style.lineButton} xs={24} sm={24} md={24} lg={24}>
+              <Button
+                className={style.monaButton}
+                type="primary"
+                href="/#/download"
+                block
+              >
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;开启你的 Mona
+                之旅&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </Button>
+            </Col>
+          </Row>
 
-          <span className={style.midText}>
-            桌面标注工具
-            <br></br>
-            让标注更美好
-          </span>
-          <Link to="/download" className={style.monaButton}>
-            开启你的 Mona 之旅
-          </Link>
           <img
             className={style.sevenleft}
             alt="seven"
@@ -43,7 +48,7 @@ export const Frontpage: React.FC = () => {
           ></img>
         </Col>
 
-        <Col span={12} className={style.rightContent}>
+        <Col xs={0} sm={12} md={12} lg={12} className={style.rightContent}>
           <img
             className={style.rightImgrunsq}
             alt="runsq"

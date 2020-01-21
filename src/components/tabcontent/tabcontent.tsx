@@ -42,7 +42,7 @@ export const Tabcontent: React.FC<{
             disabled={!checked}
             type="primary"
             size="large"
-            style={{ borderRadius: "20px", marginTop: "10px" }}
+            style={{ borderRadius: "20px", marginTop: "8px" }}
             href={downloadSrc}
           >
             下载

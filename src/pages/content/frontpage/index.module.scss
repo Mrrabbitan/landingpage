@@ -1,8 +1,5 @@
 @import "../../../style/function.scss";
 
-.roundTop {
-  margin-bottom: -60px;
-}
 .Fontpage {
   margin: 2% 0;
   display: flex;
@@ -17,12 +14,14 @@
     flex-wrap: wrap;
     width: 50%;
     flex-direction: column;
-    padding: 0 0;
+    padding: 0 180px 0 180px;
+    justify-content: center;
+    align-items: center;
     .topImage {
       display: block;
       width: dim(150);
-      margin-top: 50px;
-      margin-left: 180px;
+      margin-top: 56px;
+      align-self: flex-start;
     }
     .midText {
       width: dim(450);
@@ -33,19 +32,20 @@
       color: black;
       margin-top: 56px;
       margin-bottom: 66px;
-      margin-left: 170px;
+      // margin-left: 170px;
       z-index: 10;
     }
+
     .monaButton {
-      width: dim(430);
       height: dim(70);
       line-height: dim(70);
       font-size: dim(30);
       border-radius: 60px;
       color: white;
       background: #0068eb;
-      margin-left: 180px;
       z-index: 10;
+      text-align: center;
+      // margin-left: 190px;
     }
 
     .sevenleft {
@@ -56,58 +56,58 @@
     }
   }
 
-  @media screen and(min-width: 320px) and(max-width: 359px) {
-    .leftContent {
-      margin: 0 0 0 -300px !important;
-      .monaButton {
-        width: 360px;
-        margin-left: 210px;
-      }
-    }
-  }
+  // @media screen and(min-width: 320px) and(max-width: 359px) {
+  //   .leftContent {
+  //     margin: 0 0 0 -300px !important;
+  //     .monaButton {
+  //       width: 360px;
+  //       margin-left: 210px;
+  //     }
+  //   }
+  // }
 
-  @media screen and(min-width: 360px) and(max-width: 374px) {
-    .leftContent {
-      margin: 0 0 0 -270px !important;
-      .monaButton {
-        width: 360px;
-        margin-left: 210px;
-      }
-    }
-  }
+  // @media screen and(min-width: 360px) and(max-width: 374px) {
+  //   .leftContent {
+  //     margin: 0 0 0 -270px !important;
+  //     .monaButton {
+  //       width: 360px;
+  //       margin-left: 210px;
+  //     }
+  //   }
+  // }
 
-  @media screen and(min-width: 375px) and(max-width: 385px) {
-    .leftContent {
-      margin: 0 0 0 -220px !important;
-      .monaButton {
-        width: 360px;
-        margin-left: 210px;
-      }
-    }
-  }
+  // @media screen and(min-width: 375px) and(max-width: 385px) {
+  //   .leftContent {
+  //     margin: 0 0 0 -220px !important;
+  //     .monaButton {
+  //       width: 360px;
+  //       margin-left: 210px;
+  //     }
+  //   }
+  // }
 
-  @media screen and(min-width: 386px) and(max-width: 392px) {
-    .leftContent {
-      margin: 0 0 0 -220px !important;
-      .monaButton {
-        width: 360px;
-        margin-left: 210px;
-      }
-    }
-  }
+  // @media screen and(min-width: 386px) and(max-width: 392px) {
+  //   .leftContent {
+  //     margin: 0 0 0 -220px !important;
+  //     .monaButton {
+  //       width: 360px;
+  //       margin-left: 210px;
+  //     }
+  //   }
+  // }
 
-  @media screen and(min-width: 393px) and(max-width: 400px) {
-    // .Fontpage{
-    //     margin:0 0 0 -100px !important;
-    // }
-    .leftContent {
-      margin: 0 0 0 -220px !important;
-      .monaButton {
-        width: 360px;
-        margin-left: 210px;
-      }
-    }
-  }
+  // @media screen and(min-width: 393px) and(max-width: 400px) {
+  //   // .Fontpage{
+  //   //     margin:0 0 0 -100px !important;
+  //   // }
+  //   .leftContent {
+  //     margin: 0 0 0 -220px !important;
+  //     .monaButton {
+  //       width: 360px;
+  //       margin-left: 210px;
+  //     }
+  //   }
+  // }
 
   @media only screen and (min-width: 1826px) {
     .leftContent {
@@ -222,9 +222,28 @@
     }
   }
 
-  @media screen and (max-width: 520px) {
+  @media screen and (max-width: 499px) {
     .leftContent {
-      margin-right: 102%;
+      margin-right: 0px;
+      flex-direction: initial;
+      .topImage {
+        margin-left: -150px;
+      }
+      .midText {
+        font-size: 44px;
+      }
+
+      .monaButton {
+        width: 240px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+      }
+      .sevenleft {
+        z-index: 1;
+        left: -150px;
+        top: 10px;
+      }
     }
   }
 

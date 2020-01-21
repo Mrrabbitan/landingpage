@@ -7,7 +7,7 @@
   text-align: left;
 
   p {
-    padding: 0 dim(50);
+    padding: 0 56px;
     text-indent: dim(0);
   }
   blockquote {
@@ -22,5 +22,23 @@
   .buttonItem {
     display: flex;
     justify-content: center;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  p {
+    padding: 0;
+  }
+  .userTerms {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .userTerms {
+    padding: 0;
+  }
+  p {
+    padding: 0;
   }
 }

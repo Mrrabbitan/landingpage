@@ -19,10 +19,11 @@ export const Header: React.FC<{ items: MenuItemProps[] }> = ({ items }) => {
             <img className={style.logo} src="/picInner/mona-logo-v1.png" />
           </Link>
         </Col>
-        <Col span={8}>
+        <Col xs={14} lg={8} md={14} sm={8}>
           <HEADERMENU items={items}></HEADERMENU>
         </Col>
       </Col>
+      <Col className={style.header_bottom} span={24}></Col>
     </Row>
   );
 };

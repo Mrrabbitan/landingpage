@@ -1,246 +1,236 @@
 @import "../../../style/function.scss";
 
-
-
-
-.roundTop{
-   margin-bottom: dim(-60); 
+.roundTop {
+  margin-bottom: dim(-60);
 }
-.Frontpage{
-    margin: 2% 0;
+.Frontpage {
+  margin: 2% 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .leftContent {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-   
-
-
-.leftContent{
-    display: flex;
-    flex-wrap: wrap;
-    width:50%;
+    width: 50%;
     flex-direction: column;
-    padding: 0 dim(160);
-
-
-    .topImage{
-        display: block;
-        width:dim(150);
-        margin-top:dim(46);
+    padding: 0 180px 0 180px;
+    justify-content: center;
+    align-items: center;
+    .topImage {
+      display: block;
+      width: dim(150);
+      margin-top: 56px;
+      align-self: flex-start;
     }
-    .midText{
-        width:dim(450);
-        height:auto;
-        font-size:73px;
-        font-weight:bold;
-        display: block;
-        color:black;
-        
-        margin-top:dim(20);
-        margin-bottom:dim(20);
-        z-index:10;
+    .midText {
+      width: dim(450);
+      height: auto;
+      font-size: 73px;
+      font-weight: bold;
+      display: block;
+      color: black;
+      margin-top: 30px;
+      margin-bottom: dim(20);
+      z-index: 10;
     }
-    .describe{
-        width: dim(450);
-        height:auto;
-        font-size:dim(22);
-        text-align:left;
-        
-        margin-bottom:dim(10);
+    .describe {
+      width: dim(450);
+      height: auto;
+      font-size: dim(22);
+      text-align: left;
+      margin-bottom: dim(10);
     }
- 
 
-    .sevenleft{
-        width:dim(340);
-        position: absolute;
-        left:dim(50);
-        z-index:1;
+    .sevenleft {
+      width: dim(340);
+      position: absolute;
+      left: dim(50);
+      z-index: 1;
     }
-}
+  }
 
+  @media only screen and (min-width: 1826px) {
+    .leftContent {
+      margin-right: -25%;
+    }
+    .rightContent {
+      margin-right: -25%;
+    }
+  }
 
-@media only screen and (min-width: 1826px) {
-.leftContent{
-    margin-right:-25%
-}
-.rightContent{
-    margin-right:-25%
-}
-}
+  @media only screen and (min-width: 1926px) {
+    .leftContent {
+      margin-right: -15%;
+    }
+    .rightContent {
+      margin-right: -15%;
+    }
+  }
 
-@media only screen and (min-width: 1926px) {
-.leftContent{
-    margin-right:-15%
-}
-.rightContent{
-    margin-right:-15%
-}
-}
+  @media only screen and (min-width: 2026px) {
+    .leftContent {
+      margin-right: -13%;
+    }
+    .rightContent {
+      margin-right: -13%;
+    }
+  }
 
-@media only screen and (min-width: 2026px) {
-.leftContent{
-    margin-right:-13%
-}
-.rightContent{
-    margin-right:-13%
-}
-}
+  // 1826是dell显示屏浏览器大小
 
-// 1826是dell显示屏浏览器大小
+  // @media only screen and (max-width: 1826px) {
+  // .rightContent{
+  //     margin-right:10%
+  // }
+  // .leftContent{
+  //     margin-right:10%
+  // }
+  // }
 
-// @media only screen and (max-width: 1826px) {
-// .rightContent{
-//     margin-right:10%
-// }
-// .leftContent{
-//     margin-right:10%
-// }
-// }
+  @media only screen and (max-width: 1526px) {
+    .rightContent {
+      margin-right: 5%;
+    }
+    .leftContent {
+      margin-right: 5%;
+    }
+  }
 
+  @media only screen and (max-width: 1926px) {
+    .rightContent {
+      margin-right: -5%;
+    }
+    .leftContent {
+      margin-right: -5%;
+    }
+  }
 
-@media only screen and (max-width: 1526px) {
-.rightContent{
-    margin-right:5%
-}
-.leftContent{
-    margin-right:5%
-}
-}
+  @media only screen and (max-width: 1520px) {
+    .rightContent {
+      margin-right: 5%;
+    }
+    .leftContent {
+      margin-right: -5%;
+    }
+  }
 
+  @media only screen and (max-width: 1420px) {
+    .rightContent {
+      display: none !important;
+    }
+    .leftContent {
+      margin-right: 0%;
+    }
+  }
 
+  @media only screen and (max-width: 1326px) {
+    .leftContent {
+      margin-right: 5%;
+    }
+  }
 
-@media only screen and (max-width: 1926px) {
-.rightContent{
-    margin-right:-5%
-}
-.leftContent{
-    margin-right:-5%
-}
-}
+  @media only screen and (max-width: 1226px) {
+    .leftContent {
+      margin-right: 20%;
+    }
+  }
 
-@media only screen and (max-width: 1520px) {
-.rightContent{
-    margin-right:5%
-}
-.leftContent{
-    margin-right:-5%
-}
-}
+  @media only screen and (max-width: 1126px) {
+    .leftContent {
+      margin-right: 25%;
+    }
+  }
 
+  @media only screen and (max-width: 1026px) {
+    .leftContent {
+      margin-right: 35%;
+    }
+  }
 
-@media only screen and (max-width: 1420px) {
-.rightContent {
-display: none !important;
-}
-.leftContent{
-    margin-right:0%
-}
-}
+  @media only screen and (max-width: 926px) {
+    .leftContent {
+      margin-right: 50%;
+    }
+  }
 
-@media only screen and (max-width: 1326px) {
+  @media only screen and (max-width: 826px) {
+    .leftContent {
+      margin-right: 60%;
+    }
+  }
 
-.leftContent{
-    margin-right:5%
-}
-}
+  @media screen and (max-width: 720px) {
+    .leftContent {
+      margin-right: 70%;
+    }
+  }
 
+  @media screen and (max-width: 620px) {
+    .leftContent {
+      margin-right: 100%;
+    }
+  }
 
-@media only screen and (max-width: 1226px) {
+  @media screen and (max-width: 499px) {
+    .leftContent {
+      margin-right: 0px;
+      flex-direction: initial;
+      .topImage {
+        margin-left: -150px;
+      }
+      .midText {
+        font-size: 44px;
+      }
+      .describe {
+        width: 290px;
+        height: auto;
+        font-size: 15px;
+        text-align: left;
+        margin-bottom: dim(10);
+      }
+    }
+  }
 
-.leftContent{
-    margin-right:15%
-}
-}
+  @media screen and (max-width: 320px) {
+    .leftContent {
+      margin-right: 125%;
+    }
+  }
 
-@media only screen and (max-width: 1126px) {
-
-.leftContent{
-    margin-right:25%
-}
-}
-
-@media only screen and (max-width: 1026px) {
-
-.leftContent{
-    margin-right:35%
-}
-}
-
-@media only screen and (max-width: 926px) {
-
-.leftContent{
-    margin-right:45%
-}
-}
-
-
-@media only screen and (max-width: 826px) {
-
-.leftContent{
-    margin-right:50%
-}
-}
-
-
-@media  screen and (max-width: 720px) {
-
-.leftContent{
-    margin-right:60%
-}
-}
-
-@media  screen and (max-width: 620px) {
-
-.leftContent{
-    margin-right:75%
-}
-}
-
-@media  screen and (max-width: 520px) {
-
-.leftContent{
-    margin-right:90%
-}
-}
-
-
-
-.rightContent{
-    margin-top:dim(43);
-    height: dim(600)*0.8;
-    width:50%;
+  .rightContent {
+    margin-top: dim(43);
+    height: dim(600) * 0.8;
+    width: 50%;
     display: flex;
     flex-wrap: wrap;
     position: relative;
-   
 
-.rightImgSquare{
-    position: absolute;
-    top:82px;
-    left:350px;
-    z-index:1;
-}
-.rightImgrunsq{
-    position: absolute;
-    z-index:1;
-    top:82px;
-    left:370px;
-}
-    .rightImg{
-        display: block;
+    .rightImgSquare {
+      position: absolute;
+      top: 82px;
+      left: 350px;
+      z-index: 1;
+    }
+    .rightImgrunsq {
+      position: absolute;
+      z-index: 1;
+      top: 82px;
+      left: 370px;
+    }
+    .rightImg {
+      display: block;
 
-        margin-top:10vh;
-        z-index:10;
+      margin-top: 10vh;
+      z-index: 10;
     }
 
-    .roundlast{
-        display:block;
-        width:100%;
-        height:auto;
-        right:0px;
-        margin-top:10vh;
+    .roundlast {
+      display: block;
+      width: 100%;
+      height: auto;
+      right: 0px;
+      margin-top: 10vh;
     }
+  }
 }
-
-
-}
-

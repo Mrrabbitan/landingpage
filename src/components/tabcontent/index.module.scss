@@ -1,5 +1,6 @@
 @import "../../style/function.scss";
 .tabContent {
+  margin-left: -10px;
   .imgSize {
     height: 44px;
     width: 46px;
@@ -8,7 +9,7 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    width: 340px;
+    width: 270px;
     margin-left: 80px;
   }
   .spanText {

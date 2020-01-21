@@ -9,3 +9,9 @@
 
   padding: 3vh 0 5vh 0;
 }
+
+@media screen and (max-width: 499px) {
+  .footer {
+    padding: 0px 50px 40px 50px;
+  }
+}

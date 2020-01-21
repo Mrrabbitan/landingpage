@@ -12,13 +12,6 @@ export const Download: React.FC = () => {
   return (
     <DocumentTitle title="下载 | Momenta">
       <Row>
-        <Col span={24}>
-          <img
-            className={style.roundTop}
-            alt="rounttop"
-            src="/picInner/round.png"
-          />
-        </Col>
         <Col span={24} className={style.Frontpage}>
           <Col span={12} className={style.leftContent}>
             <img
@@ -26,13 +19,23 @@ export const Download: React.FC = () => {
               alt="some_small_pic"
               src="/picInner/geo_shape.png"
             />
-            <span className={style.midText}>
-              桌面标注工具
-              <br></br>
-            </span>
-            <p className={style.describe}>
-              使用桌面版标注工具，可以在台式机、笔记本中以桌面软件的形式启动标注工具，从而享受愉快的标注体验。标注工具支持各大操作系统，迎合不同的用户使用习惯。
-            </p>
+            <Row>
+              <Col className={style.midText}>
+                <span>
+                  桌面标注工具
+                  <br></br>
+                </span>
+              </Col>
+            </Row>
+
+            <Row>
+              <Col className={style.describe}>
+                <p>
+                  使用桌面版标注工具，可以在台式机、笔记本中以桌面软件的形式启动标注工具，从而享受愉快的标注体验。标注工具支持各大操作系统，迎合不同的用户使用习惯。
+                </p>
+              </Col>
+            </Row>
+
             <Menudownload></Menudownload>
           </Col>
 
