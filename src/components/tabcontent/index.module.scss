@@ -1,4 +1,4 @@
-@import "../../style/function.scss";
+@import '../../style/function.scss';
 .tabContent {
   margin-left: -10px;
   .imgSize {
@@ -9,7 +9,7 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    width: 270px;
+    width: 370px;
     margin-left: 80px;
   }
   .spanText {
@@ -17,6 +17,7 @@
     height: 50px;
     font-size: 18px;
     line-height: 54px;
+    width: 400px;
   }
 
   .leftElement {
