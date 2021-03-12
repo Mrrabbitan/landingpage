@@ -47,7 +47,7 @@
     "preval.macro": "^4.0.0",
     "react": "^16.12.0",
     "react-app-polyfill": "^1.0.5",
-    "react-dev-utils": "^10.0.0",
+    "react-dev-utils": "^11.0.4",
     "react-document-title": "^2.0.3",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
